@@ -2,7 +2,7 @@
 
 [![Maven Central](https://img.shields.io/maven-central/v/io.github.darkxanter/kdatamapper-core)](https://search.maven.org/artifact/io.github.darkxanter/kdatamapper-core)
 
-**KDataMapper** is Kotlin Symbol Processor for mapping kotlin classes.
+The Kotlin Data Mapper (KDataMapper) is a Kotlin Symbol Processing plugin that can generate extension functions to map fields of one class to the primary constructor of another class.
 
 ## How To Use
 
