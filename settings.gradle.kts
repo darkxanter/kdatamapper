@@ -23,4 +23,5 @@ pluginManagement {
 includeBuild("build-logic")
 include(":core")
 include(":processor")
-include(":example")
+include(":example:lib")
+include(":example:app")

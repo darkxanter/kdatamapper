@@ -3,12 +3,13 @@ val sqliteVersion: String by project
 
 plugins {
     kotlin("jvm")
-    kotlin("plugin.serialization")
     id("com.google.devtools.ksp")
     application
 }
 
 dependencies {
+    implementation(project(":example:lib"))
+
     implementation(project(":core"))
     ksp(project(":processor"))
 }
@@ -20,6 +21,7 @@ sourceSets.configureEach {
 application {
     mainClass.set("example.AppKt")
 }
+
 tasks {
     jar {
         manifest {

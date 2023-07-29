@@ -1,10 +1,10 @@
 package example
 
-import example.data.ArticleCreateDto
-import example.data.ArticleUpdateDto
-import example.data.toArticleEntity
-import example.data.toArticleTitleDto
-import example.data.toArticleWithCommentsDto
+import example.dto.ArticleCreateDto
+import example.dto.ArticleUpdateDto
+import example.dto.toArticleEntity
+import example.dto.toArticleTitleDto
+import example.dto.toArticleWithCommentsDto
 
 fun main() {
     val articleCreateDto = ArticleCreateDto(

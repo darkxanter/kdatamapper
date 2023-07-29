@@ -1,24 +1,20 @@
-package example.data
+package example.dto
 
 import com.github.darkxanter.kdatamapper.annotation.DataMapper
+import lib.ArticleEntity
 
 @DataMapper(
-    toClasses = [ArticleTitleDto::class, ArticleWithCommentsDto::class],
-    fromClasses = [ArticleCreateDto::class, ArticleUpdateDto::class],
+    toClasses = [ArticleEntity::class],
 )
-data class ArticleEntity(
-    val id: Long,
-    val title: String,
-    val content: String,
-    val tags: List<String> = emptyList(),
-)
-
 data class ArticleCreateDto(
     val title: String,
     val content: String,
     val tags: List<String> = emptyList(),
 )
 
+@DataMapper(
+    toClasses = [ArticleEntity::class],
+)
 data class ArticleUpdateDto(
     val id: Long,
     val title: String,
@@ -27,6 +23,7 @@ data class ArticleUpdateDto(
 )
 
 @DataMapper(
+    fromClasses = [ArticleEntity::class],
     toClasses = [ArticleWithCommentsDto::class],
 )
 data class ArticleTitleDto(
@@ -35,6 +32,7 @@ data class ArticleTitleDto(
 )
 
 @DataMapper(
+    fromClasses = [ArticleEntity::class],
     toClasses = [ArticleTitleDto::class],
 )
 data class ArticleWithCommentsDto(
