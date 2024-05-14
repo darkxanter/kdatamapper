@@ -137,7 +137,7 @@ Add KSP plugin to your module's `build.gradle.kts`:
 
 ```kotlin
 plugins {
-    id("com.google.devtools.ksp") version "1.7.22-1.0.8"
+    id("com.google.devtools.ksp") version "1.9.22-1.0.16"
 }
 ```
 
@@ -153,16 +153,8 @@ Add `KDataMapper` dependencies:
 
 ```kotlin
 dependencies {
-    implementation("io.github.darkxanter:kdatamapper-core:0.1.0")
-    ksp("io.github.darkxanter:kdatamapper-processor:0.1.0")
-}
-```
-
-To access generated code from KSP, you need to set up the source path into your module's `build.gradle.kts` file:
-
-```kotlin
-sourceSets.configureEach {
-    kotlin.srcDir("$buildDir/generated/ksp/$name/kotlin/")
+    implementation("io.github.darkxanter:kdatamapper-core:0.2.0")
+    ksp("io.github.darkxanter:kdatamapper-processor:0.2.0")
 }
 ```
 
