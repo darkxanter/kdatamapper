@@ -106,6 +106,7 @@ internal class DataMapperVisitor(
     ) {
         addFunction("to${to.simpleName}") {
             receiver(from)
+            returns(to)
 
             arguments.forEach { property ->
                 val type = property.type.toTypeName()
